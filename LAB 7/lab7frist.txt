@@ -1,0 +1,88 @@
+import 'package:flutter/material.dart';
+
+class lab7 extends StatelessWidget {
+  const lab7({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                    child: Container(
+                  color: Colors.cyan,
+                )),
+                Expanded(
+                    child: Container(
+                  color: Colors.black,
+                )),
+                Expanded(
+                    child: Container(
+                  color: Colors.blue,
+                )),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                    child: Container(
+                  color: Colors.purpleAccent,
+                )),
+                Expanded(
+                    child: Container(
+                  color: Colors.green,
+                )),
+                Expanded(
+                    child: Container(
+                  color: Colors.pinkAccent,
+                )),
+              ],
+            ),
+          ),
+          Expanded(
+              child: Row(
+            children: [
+              Expanded(
+                  child: Container(
+                color: Colors.amber,
+              )),
+              Expanded(
+                  child: Container(
+                color: Colors.blueAccent,
+              )),
+              Expanded(
+                  child: Container(
+                color: Colors.lightGreen,
+              )),
+            ],
+          ))
+        ],
+      ),
+    );
+  }
+}
+------------------------------------------------------
+import 'package:flutter/material.dart';
+import 'package:jencyflutter/lab7.dart';
+
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget{
+  const MyApp({Key? key}):super(key:key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home:lab7(),
+    );
+  }
+
+}
