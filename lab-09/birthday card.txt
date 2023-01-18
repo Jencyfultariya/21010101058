@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+
+class birthdaycard extends StatelessWidget {
+  const birthdaycard({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Container(
+            height: 1000,
+            width: double.infinity,
+            decoration: const BoxDecoration(
+              image: DecorationImage(image:AssetImage(
+                  'assets/Images/card.webp'),
+                  fit:BoxFit.cover
+              ),
+            ),
+
+
+
+          ),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Text("Happy birthday",style: TextStyle(fontSize: 50,fontWeight:FontWeight.bold),),
+          ), Align(
+            alignment: Alignment.bottomRight,
+            child: Text("From : jency fultariya",style: TextStyle(fontSize: 50,fontWeight:FontWeight.bold),),
+          ),
+
+        ],
+      ),
+    );
+  }
+}

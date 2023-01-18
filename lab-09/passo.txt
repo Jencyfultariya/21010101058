@@ -1,0 +1,61 @@
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+int i=2;
+int j=3;
+
+class login extends StatefulWidget {
+  const login({Key? key}) : super(key: key);
+
+  @override
+  State<login> createState() => _loginState();
+}
+
+class _loginState extends State<login> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.green,
+      body: Row(
+
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Expanded(
+            child: InkWell(
+              onTap:(){
+                getRandom();
+
+              },
+              child: Container(
+                margin: EdgeInsets.all(8),
+                child: Image(
+                  image: AssetImage("assets/Images/dice$i.png"),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: InkWell(
+              onTap: (){
+                getRandom();
+              },
+              child: Container(
+                margin: EdgeInsets.all(8),
+                child: Image(
+                  image: AssetImage("assets/Images/dice$j.png"),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  void getRandom(){
+    setState(() {
+      i=Random().nextInt(5)+1;
+      j=Random().nextInt(5)+1;
+    });
+
+  }
+}
